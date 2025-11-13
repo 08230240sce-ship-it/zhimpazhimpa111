@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Rice - ZHIMPA ZHIMPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">ZHIMPA <span>ZHIMPA</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="share.html" class="btn share-btn">Share a recipe</a></li>
+                        <!-- User Menu (shown when logged in) -->
+                        <li class="user-menu" id="user-menu">
+                            <div class="user-dropdown">
+                                <button class="user-dropdown-btn">
+                                    <span id="user-name">User</span> ▼
+                                </button>
+                                <div class="user-dropdown-content">
+                                    <a href="profile.html">My Profile</a>
+                                    <a href="my-recipes.html">My Recipes</a>
+                                    <a href="#" onclick="logout()">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Auth Buttons (shown when not logged in) -->
+                        <li class="auth-buttons" id="auth-buttons">
+                            <a href="login.html" class="btn">Log in</a>
+                            <a href="signup.html" class="btn btn-secondary">Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Recipe Detail -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Red Rice</h1>
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px;">Traditional Bhutanese red rice preparation. Serves 4 • Easy • ~30 minutes</p>
+                
+                <div style="height: 400px; background-color: var(--secondary); background-image: url('https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 40px;"></div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px;">
+                    <div>
+                        <h2 style="margin-bottom: 20px; color: var(--primary);">Ingredients</h2>
+                        <ul style="list-style-type: none;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">2 cups Bhutanese red rice</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">3 cups water</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 tsp salt</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 tbsp butter or oil (optional)</li>
+                        </ul>
+                        <p style="margin-top: 20px; font-style: italic; color: #666;">Note: Bhutanese red rice has a nutty flavor and slightly chewy texture. Rinsing twice helps achieve the perfect consistency.</p>
+                    </div>
+                    
+                    <div>
+                        <h2 style="margin-bottom: 20px; color: var(--primary);">Steps</h2>
+                        <ol style="padding-left: 20px;">
+                            <li style="margin-bottom: 15px;"><strong>Rinse Rice:</strong> Place red rice in a bowl and rinse under cold water 2-3 times until water runs clear.</li>
+                            <li style="margin-bottom: 15px;"><strong>Soak (Optional):</strong> For best results, soak rice in water for 20-30 minutes before cooking.</li>
+                            <li style="margin-bottom: 15px;"><strong>Cook:</strong> In a pot, combine rinsed rice, water, salt, and butter/oil if using.</li>
+                            <li style="margin-bottom: 15px;"><strong>Bring to Boil:</strong> Bring to a rolling boil over high heat.</li>
+                            <li style="margin-bottom: 15px;"><strong>Simmer:</strong> Once boiling, reduce heat to low, cover, and simmer for 20 minutes.</li>
+                            <li style="margin-bottom: 15px;"><strong>Rest:</strong> Remove from heat and let it sit covered for 5-10 minutes.</li>
+                            <li style="margin-bottom: 15px;"><strong>Fluff:</strong> Fluff rice with a fork before serving.</li>
+                            <li><strong>Serve</strong> as a base for curries, stews, or with any Bhutanese main dish.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div style="background-color: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h2 style="margin-bottom: 20px; color: var(--primary);">Discussion</h2>
+                    <p style="margin-bottom: 20px;">Share tips or variations for cooking perfect red rice.</p>
+                    
+                    <form id="discussion-form" style="margin-bottom: 30px;">
+                        <div class="form-group">
+                            <label for="user-name">Your name</label>
+                            <input type="text" id="user-name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Share your experience with this recipe..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Post</button>
+                    </form>
+                    
+                    <div id="discussion-container">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-author">Tandin N</div>
+                                <div class="review-date">2025-09-01</div>
+                            </div>
+                            <p>Rinsing twice gave the nutty bite I wanted. Perfect texture every time!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">ZHIMPA ZHIMPA</div>
+                    <p class="footer-about">A modern celebration of Bhutanese cuisine — farmhouse ingredients, bold chilies, and warm hospitality.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="share.html">Share</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mission">
+                    <h3>Mission</h3>
+                    <p>Preserving Bhutan's culinary heritage by making it easy to share trusted recipes and connect with cooks.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recipes, stories, and community events. No spam.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="you@example.com" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> ZHIMPA ZHIMPA. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

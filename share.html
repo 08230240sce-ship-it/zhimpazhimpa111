@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share a Recipe - ZHIMPA ZHIMPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">ZHIMPA <span>ZHIMPA</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="share.html" class="btn share-btn active">Share a recipe</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 0; background: var(--primary);">
+        <div class="container">
+            <h1>Share your Bhutanese recipe</h1>
+            <p>Add your family's recipe to ZHIMPA ZHIMPA. Photo, ingredients, and clear steps help others learn.</p>
+        </div>
+    </section>
+
+    <!-- Share Form -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <form id="share-recipe-form">
+                    <div class="form-group">
+                        <label for="recipe-title">Title</label>
+                        <input type="text" id="recipe-title" class="form-control" placeholder="Ema Datshi">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="recipe-time">Time</label>
+                            <input type="text" id="recipe-time" class="form-control" placeholder="45m">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipe-difficulty">Difficulty</label>
+                            <select id="recipe-difficulty" class="form-control">
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipe-type">Type</label>
+                            <select id="recipe-type" class="form-control">
+                                <option value="staples">Staples</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="meat">Meat</option>
+                                <option value="drinks">Drinks</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipe-image">Image URL</label>
+                        <input type="text" id="recipe-image" class="form-control" placeholder="https://...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipe-ingredients">Ingredients</label>
+                        <textarea id="recipe-ingredients" class="form-control" placeholder="List each ingredient on a new line"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipe-steps">Steps</label>
+                        <textarea id="recipe-steps" class="form-control" placeholder="Describe each step clearly"></textarea>
+                    </div>
+                    
+                    <div style="display: flex; gap: 15px; margin-top: 30px;">
+                        <button type="reset" class="btn" style="background-color: #666;">Clear</button>
+                        <button type="submit" class="btn">Share recipe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">ZHIMPA ZHIMPA</div>
+                    <p class="footer-about">A modern celebration of Bhutanese cuisine — farmhouse ingredients, bold chilies, and warm hospitality.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="share.html">Share</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mission">
+                    <h3>Mission</h3>
+                    <p>Preserving Bhutan's culinary heritage by making it easy to share trusted recipes and connect with cooks.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recipes, stories, and community events. No spam.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="you@example.com" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> ZHIMPA ZHIMPA. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

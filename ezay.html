@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezay - ZHIMPA ZHIMPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">ZHIMPA <span>ZHIMPA</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="share.html" class="btn share-btn">Share a recipe</a></li>
+                        <!-- User Menu (shown when logged in) -->
+                        <li class="user-menu" id="user-menu">
+                            <div class="user-dropdown">
+                                <button class="user-dropdown-btn">
+                                    <span id="user-name">User</span> ▼
+                                </button>
+                                <div class="user-dropdown-content">
+                                    <a href="profile.html">My Profile</a>
+                                    <a href="my-recipes.html">My Recipes</a>
+                                    <a href="#" onclick="logout()">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Auth Buttons (shown when not logged in) -->
+                        <li class="auth-buttons" id="auth-buttons">
+                            <a href="login.html" class="btn">Log in</a>
+                            <a href="signup.html" class="btn btn-secondary">Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Recipe Detail -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Ezay (Chili Relish)</h1>
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px;">Spicy chili condiment to accompany any meal. Makes 1 cup • Easy • ~15 minutes</p>
+                
+                <div style="height: 400px; background-color: var(--secondary); background-image: url('https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 40px;"></div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px;">
+                    <div>
+                        <h2 style="margin-bottom: 20px; color: var(--primary);">Ingredients</h2>
+                        <ul style="list-style-type: none;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">10-12 fresh red chilies</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">4 cloves garlic</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 inch ginger</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 medium onion, chopped</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">2 tomatoes, chopped</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 tbsp oil</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 tsp salt</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1/2 tsp Sichuan peppercorns (optional)</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Fresh coriander for garnish</li>
+                        </ul>
+                        <p style="margin-top: 20px; font-style: italic; color: #666;">Tip: Adjust the number of chilies based on your spice tolerance. For milder ezay, remove seeds from chilies.</p>
+                    </div>
+                    
+                    <div>
+                        <h2 style="margin-bottom: 20px; color: var(--primary);">Steps</h2>
+                        <ol style="padding-left: 20px;">
+                            <li style="margin-bottom: 15px;"><strong>Prep Ingredients:</strong> Roughly chop chilies, garlic, ginger, onion, and tomatoes.</li>
+                            <li style="margin-bottom: 15px;"><strong>Roast (Optional):</strong> For deeper flavor, briefly roast chilies, garlic, and ginger in a dry pan.</li>
+                            <li style="margin-bottom: 15px;"><strong>Blend:</strong> Combine all ingredients except oil in a blender or mortar. Pulse until coarsely chopped.</li>
+                            <li style="margin-bottom: 15px;"><strong>Cook:</strong> Heat oil in a pan. Add the blended mixture and cook for 5-7 minutes on medium heat.</li>
+                            <li style="margin-bottom: 15px;"><strong>Season:</strong> Add salt and Sichuan peppercorns if using. Cook for another 2 minutes.</li>
+                            <li style="margin-bottom: 15px;"><strong>Cool:</strong> Remove from heat and let it cool completely.</li>
+                            <li style="margin-bottom: 15px;"><strong>Garnish:</strong> Mix in fresh coriander.</li>
+                            <li><strong>Store</strong> in an airtight container in refrigerator for up to 2 weeks.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div style="background-color: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h2 style="margin-bottom: 20px; color: var(--primary);">Discussion</h2>
+                    <p style="margin-bottom: 20px;">Share tips or variations for making Ezay.</p>
+                    
+                    <form id="discussion-form" style="margin-bottom: 30px;">
+                        <div class="form-group">
+                            <label for="user-name">Your name</label>
+                            <input type="text" id="user-name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Share your experience with this recipe..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Post</button>
+                    </form>
+                    
+                    <div id="discussion-container">
+                        <p style="text-align: center; color: #666; padding: 20px;">No messages yet. Be the first to start the discussion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">ZHIMPA ZHIMPA</div>
+                    <p class="footer-about">A modern celebration of Bhutanese cuisine — farmhouse ingredients, bold chilies, and warm hospitality.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="share.html">Share</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mission">
+                    <h3>Mission</h3>
+                    <p>Preserving Bhutan's culinary heritage by making it easy to share trusted recipes and connect with cooks.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recipes, stories, and community events. No spam.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="you@example.com" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> ZHIMPA ZHIMPA. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
