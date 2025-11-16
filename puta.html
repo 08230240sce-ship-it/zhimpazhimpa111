@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puta - ZHIMPA ZHIMPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">ZHIMPA <span>ZHIMPA</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="share.html" class="btn share-btn">Share a recipe</a></li>
+                        <!-- User Menu (shown when logged in) -->
+                        <li class="user-menu" id="user-menu">
+                            <div class="user-dropdown">
+                                <button class="user-dropdown-btn">
+                                    <span id="user-name">User</span> ▼
+                                </button>
+                                <div class="user-dropdown-content">
+                                    <a href="profile.html">My Profile</a>
+                                    <a href="my-recipes.html">My Recipes</a>
+                                    <a href="#" onclick="logout()">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Auth Buttons (shown when not logged in) -->
+                        <li class="auth-buttons" id="auth-buttons">
+                            <a href="login.html" class="btn">Log in</a>
+                            <a href="signup.html" class="btn btn-secondary">Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Recipe Detail -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Puta (Buckwheat Noodles)</h1>
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px;">Traditional buckwheat noodles with spicy sauce. Serves 4 • Medium • ~1 hour</p>
+                
+                <div style="height: 400px; background-color: var(--secondary); background-image: url('images/puta.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 40px;"></div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px;">
+                    <div>
+                        <h2 style="margin-bottom: 20px; color: var(--primary);">Ingredients</h2>
+                        <h3 style="margin: 15px 0 10px; color: var(--accent);">For Noodles:</h3>
+                        <ul style="list-style-type: none;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">2 cups buckwheat flour</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1/2 cup all-purpose flour</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">3/4 cup warm water</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1/2 tsp salt</li>
+                        </ul>
+                        
+                        <h3 style="margin: 15px 0 10px; color: var(--accent);">For Sauce:</h3>
+                        <ul style="list-style-type: none;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">4 tbsp chili oil</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">3 cloves garlic, minced</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">2 tbsp soy sauce</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 tbsp vinegar</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 tsp Sichuan peppercorns, toasted</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">2 spring onions, chopped</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 tbsp sesame seeds</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h2 style="margin-bottom: 20px; color: var(--primary);">Steps</h2>
+                        <ol style="padding-left: 20px;">
+                            <li style="margin-bottom: 15px;"><strong>Make Dough:</strong> Mix flours and salt. Gradually add warm water to form a firm dough. Knead for 10 minutes.</li>
+                            <li style="margin-bottom: 15px;"><strong>Rest Dough:</strong> Cover dough and let it rest for 30 minutes.</li>
+                            <li style="margin-bottom: 15px;"><strong>Roll & Cut:</strong> Roll dough thin and cut into noodles, or use a pasta machine.</li>
+                            <li style="margin-bottom: 15px;"><strong>Cook Noodles:</strong> Boil noodles in salted water for 3-5 minutes until cooked but firm. Drain and rinse with cold water.</li>
+                            <li style="margin-bottom: 15px;"><strong>Prepare Sauce:</strong> Mix chili oil, garlic, soy sauce, vinegar, and crushed Sichuan peppercorns.</li>
+                            <li style="margin-bottom: 15px;"><strong>Combine:</strong> Toss noodles with the spicy sauce until well coated.</li>
+                            <li style="margin-bottom: 15px;"><strong>Garnish:</strong> Top with spring onions and toasted sesame seeds.</li>
+                            <li><strong>Serve</strong> immediately, either warm or at room temperature.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div style="background-color: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h2 style="margin-bottom: 20px; color: var(--primary);">Discussion</h2>
+                    <p style="margin-bottom: 20px;">Share tips or variations for Puta noodles.</p>
+                    
+                    <form id="discussion-form" style="margin-bottom: 30px;">
+                        <div class="form-group">
+                            <label for="user-name">Your name</label>
+                            <input type="text" id="user-name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Share your experience with this recipe..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Post</button>
+                    </form>
+                    
+                    <div id="discussion-container">
+                        <p style="text-align: center; color: #666; padding: 20px;">No messages yet. Be the first to start the discussion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">ZHIMPA ZHIMPA</div>
+                    <p class="footer-about">A modern celebration of Bhutanese cuisine — farmhouse ingredients, bold chilies, and warm hospitality.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="share.html">Share</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mission">
+                    <h3>Mission</h3>
+                    <p>Preserving Bhutan's culinary heritage by making it easy to share trusted recipes and connect with cooks.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recipes, stories, and community events. No spam.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="you@example.com" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> ZHIMPA ZHIMPA. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

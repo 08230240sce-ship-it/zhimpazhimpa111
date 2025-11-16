@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ZHIMPA ZHIMPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Simple Login Page without Header -->
+    <section class="section auth-container">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div class="logo" style="font-size: 2.5rem; margin-bottom: 10px;">ZHIMPA <span>ZHIMPA</span></div>
+                <p style="color: #666;">A modern celebration of Bhutanese cuisine</p>
+            </div>
+            
+            <div class="auth-card">
+                <h1 style="text-align: center; margin-bottom: 10px; color: var(--primary);">Welcome back</h1>
+                <p style="text-align: center; margin-bottom: 30px; color: #666;">Log in to share and save recipes</p>
+                
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" class="form-control" placeholder="you@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" class="form-control" placeholder="********" required>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; margin-bottom: 20px;">Log in</button>
+                    
+                    <div class="auth-links">
+                        Don't have an account? <a href="signup.html">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer for Login Page -->
+    <footer style="background-color: var(--dark); color: var(--white); padding: 30px 0; margin-top: 50px;">
+        <div class="container">
+            <div style="text-align: center;">
+                <p>&copy; <span id="current-year">2025</span> ZHIMPA ZHIMPA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

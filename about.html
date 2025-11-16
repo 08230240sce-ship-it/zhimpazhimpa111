@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - ZHIMPA ZHIMPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">ZHIMPA <span>ZHIMPA</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="share.html" class="btn share-btn">Share a recipe</a></li>
+                        <!-- User Menu (shown when logged in) -->
+                        <li class="user-menu" id="user-menu">
+                            <div class="user-dropdown">
+                                <button class="user-dropdown-btn">
+                                    <span id="user-name">User</span> ▼
+                                </button>
+                                <div class="user-dropdown-content">
+                                    <a href="profile.html">My Profile</a>
+                                    <a href="my-recipes.html">My Recipes</a>
+                                    <a href="#" onclick="logout()">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Auth Buttons (shown when not logged in) -->
+                        <li class="auth-buttons" id="auth-buttons">
+                            <a href="login.html" class="btn">Log in</a>
+                            <a href="signup.html" class="btn btn-secondary">Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg'); background-size: cover; background-position: center; padding: 60px 0;">
+        <div class="container">
+            <h1>About ZHIMPA ZHIMPA</h1>
+            <p>This platform preserves Bhutanese culinary heritage by making it easy to share and discover trusted recipes.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <p class="text-center mb-30">Five members. Click a card to add details later.</p>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('images/team-tshering.jpg');"></div>
+                    <h3 class="team-name">Tshering Gatsho Norbu</h3>
+                    <p class="team-role">CEO</p>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('images/team-pem.jpg');"></div>
+                    <h3 class="team-name">Tshering Pem</h3>
+                    <p class="team-role">Designer</p>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('images/team-yeetsho.jpg');"></div>
+                    <h3 class="team-name">Yeetsho Choden</h3>
+                    <p class="team-role">Coordinator</p>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('images/team-ugyen.jpg');"></div>
+                    <h3 class="team-name">Ugyen Lhaden</h3>
+                    <p class="team-role">HR Director</p>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('images/team-yonten.jpg');"></div>
+                    <h3 class="team-name">Yonten Zangmo</h3>
+                    <p class="team-role">HR Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">ZHIMPA ZHIMPA</div>
+                    <p class="footer-about">A modern celebration of Bhutanese cuisine — farmhouse ingredients, bold chilies, and warm hospitality.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="share.html">Share</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mission">
+                    <h3>Mission</h3>
+                    <p>Preserving Bhutan's culinary heritage by making it easy to share trusted recipes and connect with cooks.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recipes, stories, and community events. No spam.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="you@example.com" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> ZHIMPA ZHIMPA. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

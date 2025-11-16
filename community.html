@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - ZHIMPA ZHIMPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">ZHIMPA <span>ZHIMPA</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="community.html" class="active">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="share.html" class="btn share-btn">Share a recipe</a></li>
+                        <!-- User Menu (shown when logged in) -->
+                        <li class="user-menu" id="user-menu">
+                            <div class="user-dropdown">
+                                <button class="user-dropdown-btn">
+                                    <span id="user-name">User</span> ▼
+                                </button>
+                                <div class="user-dropdown-content">
+                                    <a href="profile.html">My Profile</a>
+                                    <a href="my-recipes.html">My Recipes</a>
+                                    <a href="#" onclick="logout()">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Auth Buttons (shown when not logged in) -->
+                        <li class="auth-buttons" id="auth-buttons">
+                            <a href="login.html" class="btn">Log in</a>
+                            <a href="signup.html" class="btn btn-secondary">Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg'); background-size: cover; background-position: center; padding: 60px 0;">
+        <div class="container">
+            <h1>Community Reviews</h1>
+            <p>Read experiences from the community and add your own review.</p>
+        </div>
+    </section>
+
+    <!-- Community Content -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px;">
+                <!-- Review Form -->
+                <div>
+                    <div style="background-color: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h2 style="margin-bottom: 20px; color: var(--primary);">Add a review</h2>
+                        <form id="review-form">
+                            <div class="form-group">
+                                <label for="review-name">Your name</label>
+                                <input type="text" id="review-name" class="form-control" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="review-title">Title (optional)</label>
+                                <input type="text" id="review-title" class="form-control" placeholder="Great ema datshi!">
+                            </div>
+                            <div class="form-group">
+                                <label>Rating</label>
+                                <div style="display: flex; gap: 5px;">
+                                    <label><input type="radio" name="rating" value="1"> ★</label>
+                                    <label><input type="radio" name="rating" value="2"> ★★</label>
+                                    <label><input type="radio" name="rating" value="3"> ★★★</label>
+                                    <label><input type="radio" name="rating" value="4"> ★★★★</label>
+                                    <label><input type="radio" name="rating" value="5" checked> ★★★★★</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="review-text">Review</label>
+                                <textarea id="review-text" class="form-control" placeholder="Share your experience..."></textarea>
+                            </div>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Reviews List -->
+                <div>
+                    <h2 style="margin-bottom: 20px; color: var(--primary);">Community Reviews</h2>
+                    <div id="reviews-container">
+                        <!-- Review 1 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-author">Pema D</div>
+                                <div class="review-date">2025-08-01</div>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                            <h4>Perfect ema datshi!</h4>
+                            <p>The tips on chili varieties were spot on.</p>
+                        </div>
+                        
+                        <!-- Review 2 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-author">Kinley W</div>
+                                <div class="review-date">2025-08-15</div>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                            <h4>Loved the momos</h4>
+                            <p>Steaming time was ideal; dough thickness guidance helped.</p>
+                        </div>
+                        
+                        <!-- Review 3 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-author">Tandin N</div>
+                                <div class="review-date">2025-09-01</div>
+                            </div>
+                            <div class="review-rating">★★★★☆</div>
+                            <h4>Red rice texture</h4>
+                            <p>Rinsing twice gave the nutty bite I wanted.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">ZHIMPA ZHIMPA</div>
+                    <p class="footer-about">A modern celebration of Bhutanese cuisine — farmhouse ingredients, bold chilies, and warm hospitality.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="share.html">Share</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mission">
+                    <h3>Mission</h3>
+                    <p>Preserving Bhutan's culinary heritage by making it easy to share trusted recipes and connect with cooks.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recipes, stories, and community events. No spam.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="you@example.com" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> ZHIMPA ZHIMPA. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

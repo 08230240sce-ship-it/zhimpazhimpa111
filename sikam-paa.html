@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikam Paa - ZHIMPA ZHIMPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">ZHIMPA <span>ZHIMPA</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="share.html" class="btn share-btn">Share a recipe</a></li>
+                        <!-- User Menu (shown when logged in) -->
+                        <li class="user-menu" id="user-menu">
+                            <div class="user-dropdown">
+                                <button class="user-dropdown-btn">
+                                    <span id="user-name">User</span> ▼
+                                </button>
+                                <div class="user-dropdown-content">
+                                    <a href="profile.html">My Profile</a>
+                                    <a href="my-recipes.html">My Recipes</a>
+                                    <a href="#" onclick="logout()">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Auth Buttons (shown when not logged in) -->
+                        <li class="auth-buttons" id="auth-buttons">
+                            <a href="login.html" class="btn">Log in</a>
+                            <a href="signup.html" class="btn btn-secondary">Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Recipe Detail -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Sikam Paa</h1>
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px;">Pork belly stir-fry with dried chili. Serves 4 • Medium • ~1 hour</p>
+                
+                <div style="height: 400px; background-color: var(--secondary); background-image: url('images/sikam-paa.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 40px;"></div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px;">
+                    <div>
+                        <h2 style="margin-bottom: 20px; color: var(--primary);">Ingredients</h2>
+                        <ul style="list-style-type: none;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">500g pork belly, sliced</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 large onion, sliced</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">8-10 dried red chilies</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">4 cloves garlic, sliced</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 inch ginger, julienned</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">3 tbsp oil</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 tsp Sichuan peppercorns</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">2 tbsp soy sauce</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">1 tbsp chili powder</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Salt to taste</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">Spring onions for garnish</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h2 style="margin-bottom: 20px; color: var(--primary);">Steps</h2>
+                        <ol style="padding-left: 20px;">
+                            <li style="margin-bottom: 15px;"><strong>Prep Pork:</strong> Cut pork belly into thin slices. If using fresh pork, you can briefly boil it first.</li>
+                            <li style="margin-bottom: 15px;"><strong>Render Fat:</strong> Heat oil in a wok. Add pork belly and cook until fat renders and meat is crispy.</li>
+                            <li style="margin-bottom: 15px;"><strong>Add Aromatics:</strong> Add onions and cook until translucent. Then add garlic and ginger.</li>
+                            <li style="margin-bottom: 15px;"><strong>Spices:</strong> Add dried chilies and Sichuan peppercorns. Stir-fry for 1 minute.</li>
+                            <li style="margin-bottom: 15px;"><strong>Season:</strong> Add soy sauce, chili powder, and salt. Mix well.</li>
+                            <li style="margin-bottom: 15px;"><strong>Stir-fry:</strong> Continue cooking on high heat for 5-7 minutes until everything is well combined.</li>
+                            <li style="margin-bottom: 15px;"><strong>Garnish:</strong> Add chopped spring onions and give a final stir.</li>
+                            <li><strong>Serve</strong> hot with red rice or as a side dish.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div style="background-color: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h2 style="margin-bottom: 20px; color: var(--primary);">Discussion</h2>
+                    <p style="margin-bottom: 20px;">Share tips or variations for Sikam Paa.</p>
+                    
+                    <form id="discussion-form" style="margin-bottom: 30px;">
+                        <div class="form-group">
+                            <label for="user-name">Your name</label>
+                            <input type="text" id="user-name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Share your experience with this recipe..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Post</button>
+                    </form>
+                    
+                    <div id="discussion-container">
+                        <p style="text-align: center; color: #666; padding: 20px;">No messages yet. Be the first to start the discussion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">ZHIMPA ZHIMPA</div>
+                    <p class="footer-about">A modern celebration of Bhutanese cuisine — farmhouse ingredients, bold chilies, and warm hospitality.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="share.html">Share</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mission">
+                    <h3>Mission</h3>
+                    <p>Preserving Bhutan's culinary heritage by making it easy to share trusted recipes and connect with cooks.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recipes, stories, and community events. No spam.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="you@example.com" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> ZHIMPA ZHIMPA. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

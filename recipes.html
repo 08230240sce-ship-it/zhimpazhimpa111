@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - ZHIMPA ZHIMPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">ZHIMPA <span>ZHIMPA</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html" class="active">Recipes</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="share.html" class="btn share-btn">Share a recipe</a></li>
+                        <!-- User Menu (shown when logged in) -->
+                        <li class="user-menu" id="user-menu">
+                            <div class="user-dropdown">
+                                <button class="user-dropdown-btn">
+                                    <span id="user-name">User</span> ▼
+                                </button>
+                                <div class="user-dropdown-content">
+                                    <a href="profile.html">My Profile</a>
+                                    <a href="my-recipes.html">My Recipes</a>
+                                    <a href="#" onclick="logout()">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Auth Buttons (shown when not logged in) -->
+                        <li class="auth-buttons" id="auth-buttons">
+                            <a href="login.html" class="btn">Log in</a>
+                            <a href="signup.html" class="btn btn-secondary">Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg'); background-size: cover; background-position: center; padding: 60px 0;">
+        <div class="container">
+            <h1>Bhutanese Recipes</h1>
+            <p>Browse and discover recipes shared by the ZHIMPA ZHIMPA community.</p>
+        </div>
+    </section>
+
+    <!-- Recipe Filters -->
+    <section class="section" style="padding: 30px 0; background-color: var(--white);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+                    <button class="filter-btn" data-filter="meat">Meat</button>
+                    <button class="filter-btn" data-filter="staples">Staples</button>
+                    <button class="filter-btn" data-filter="drinks">Drinks</button>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <input type="text" placeholder="Search recipes..." class="form-control" style="width: 200px;">
+                    <a href="share.html" class="btn">Share a recipe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="recipe-grid">
+                <!-- Ema Datshi -->
+                <div class="recipe-card" data-category="staples">
+                    <div class="recipe-img" style="background-image: url('images/ema-datshi.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>45m</span>
+                            <span>Easy</span>
+                            <span>Staples</span>
+                        </div>
+                        <h3 class="recipe-title">Ema Datshi</h3>
+                        <p>Bhutan's iconic chili and cheese stew.</p>
+                        <div class="recipe-actions">
+                            <a href="ema-datshi.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kewa Datshi -->
+                <div class="recipe-card" data-category="vegetarian">
+                    <div class="recipe-img" style="background-image: url('images/kewa-datshi.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>40m</span>
+                            <span>Easy</span>
+                            <span>Vegetarian</span>
+                        </div>
+                        <h3 class="recipe-title">Kewa Datshi</h3>
+                        <p>Potato and cheese curry, a comforting Bhutanese dish.</p>
+                        <div class="recipe-actions">
+                            <a href="kewa-datshi.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shakam Paa -->
+                <div class="recipe-card" data-category="meat">
+                    <div class="recipe-img" style="background-image: url('images/shakam-paa.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>1h 15m</span>
+                            <span>Medium</span>
+                            <span>Meat</span>
+                        </div>
+                        <h3 class="recipe-title">Shakam Paa</h3>
+                        <p>Dried beef stir-fry with radish and chili.</p>
+                        <div class="recipe-actions">
+                            <a href="shakam-paa.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jasha Maroo -->
+                <div class="recipe-card" data-category="meat">
+                    <div class="recipe-img" style="background-image: url('images/jasha-maroo.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>55m</span>
+                            <span>Medium</span>
+                            <span>Meat</span>
+                        </div>
+                        <h3 class="recipe-title">Jasha Maroo</h3>
+                        <p>Spicy chicken stew with tomatoes and chili.</p>
+                        <div class="recipe-actions">
+                            <a href="jasha-maroo.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sikam Paa -->
+                <div class="recipe-card" data-category="meat">
+                    <div class="recipe-img" style="background-image: url('images/sikam-paa.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>1h</span>
+                            <span>Medium</span>
+                            <span>Meat</span>
+                        </div>
+                        <h3 class="recipe-title">Sikam Paa</h3>
+                        <p>Pork belly stir-fry with dried chili.</p>
+                        <div class="recipe-actions">
+                            <a href="sikam-paa.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hoentay -->
+                <div class="recipe-card" data-category="staples">
+                    <div class="recipe-img" style="background-image: url('images/hoentay.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>1h 15m</span>
+                            <span>Medium</span>
+                            <span>Staples</span>
+                        </div>
+                        <h3 class="recipe-title">Hoentay</h3>
+                        <p>Buckwheat dumplings filled with turnip greens.</p>
+                        <div class="recipe-actions">
+                            <a href="hoentay.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Red Rice -->
+                <div class="recipe-card" data-category="staples">
+                    <div class="recipe-img" style="background-image: url('images/red-rice.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>30m</span>
+                            <span>Easy</span>
+                            <span>Staples</span>
+                        </div>
+                        <h3 class="recipe-title">Red Rice</h3>
+                        <p>Traditional Bhutanese red rice preparation.</p>
+                        <div class="recipe-actions">
+                            <a href="red-rice.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Puta -->
+                <div class="recipe-card" data-category="staples">
+                    <div class="recipe-img" style="background-image: url('images/puta.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>1h</span>
+                            <span>Medium</span>
+                            <span>Staples</span>
+                        </div>
+                        <h3 class="recipe-title">Puta (Buckwheat Noodles)</h3>
+                        <p>Traditional buckwheat noodles with spicy sauce.</p>
+                        <div class="recipe-actions">
+                            <a href="puta.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suja -->
+                <div class="recipe-card" data-category="drinks">
+                    <div class="recipe-img" style="background-image: url('images/suja.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>20m</span>
+                            <span>Easy</span>
+                            <span>Drinks</span>
+                        </div>
+                        <h3 class="recipe-title">Suja (Butter Tea)</h3>
+                        <p>Traditional Bhutanese salted butter tea.</p>
+                        <div class="recipe-actions">
+                            <a href="suja.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ezay -->
+                <div class="recipe-card" data-category="staples">
+                    <div class="recipe-img" style="background-image: url('images/ezay.jpg');"></div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>15m</span>
+                            <span>Easy</span>
+                            <span>Staples</span>
+                        </div>
+                        <h3 class="recipe-title">Ezay (Chili Relish)</h3>
+                        <p>Spicy chili condiment to accompany any meal.</p>
+                        <div class="recipe-actions">
+                            <a href="ezay.html" class="btn">View recipe</a>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">ZHIMPA ZHIMPA</div>
+                    <p class="footer-about">A modern celebration of Bhutanese cuisine — farmhouse ingredients, bold chilies, and warm hospitality.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="share.html">Share</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mission">
+                    <h3>Mission</h3>
+                    <p>Preserving Bhutan's culinary heritage by making it easy to share trusted recipes and connect with cooks.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recipes, stories, and community events. No spam.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="you@example.com" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> ZHIMPA ZHIMPA. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
